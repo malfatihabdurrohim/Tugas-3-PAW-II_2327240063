@@ -1,0 +1,50 @@
+### Install ekstensi "REST Client" di VS Code, lalu klik "Send Request"
+@host = http://localhost:4000
+@key = rahasia123
+
+### BERHASIL 1 - GET semua
+GET {{host}}/api/buku
+
+### BERHASIL 2 - GET by ID
+GET {{host}}/api/buku/1
+
+### BERHASIL 3 - POST
+POST {{host}}/api/buku
+Content-Type: application/json
+x-api-key: {{key}}
+
+{ "judul": "Dilan 1990", "penulis": "Pidi Baiq", "tahun": 2014 }
+
+### BERHASIL 4 - PUT
+PUT {{host}}/api/buku/1
+Content-Type: application/json
+x-api-key: {{key}}
+
+{ "judul": "Laskar Pelangi (Edisi Baru)", "penulis": "Andrea Hirata", "tahun": 2008 }
+
+### BERHASIL 5 - DELETE
+DELETE {{host}}/api/buku/2
+x-api-key: {{key}}
+
+### GAGAL 1 - tanpa API key (401)
+POST {{host}}/api/buku
+Content-Type: application/json
+
+{ "judul": "Tanpa Key", "penulis": "X", "tahun": 2020 }
+
+### GAGAL 2 - data tidak lengkap (400)
+POST {{host}}/api/buku
+Content-Type: application/json
+x-api-key: {{key}}
+
+{ "judul": "Hanya Judul" }
+
+### GAGAL 3 - JSON rusak (400)
+POST {{host}}/api/buku
+Content-Type: application/json
+x-api-key: {{key}}
+
+{ "judul": "Rusak", "penulis": }
+
+### GAGAL 4 - ID tidak ditemukan (404)
+GET {{host}}/api/buku/999

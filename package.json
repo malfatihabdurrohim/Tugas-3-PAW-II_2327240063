@@ -1,0 +1,31 @@
+{
+  "name": "si5b_kuis1_m.-alfatih-abdurrohim_2327240063",
+  "version": "1.0.0",
+  "description": "RESTful API Express.js (topik: Buku) dengan arsitektur terstruktur.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malfatihabdurrohim/SI5B_Kuis1_M.-Alfatih-Abdurrohim_2327240063.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/malfatihabdurrohim/SI5B_Kuis1_M.-Alfatih-Abdurrohim_2327240063/issues"
+  },
+  "homepage": "https://github.com/malfatihabdurrohim/SI5B_Kuis1_M.-Alfatih-Abdurrohim_2327240063#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.4",
+    "nodemon": "^3.1.14"
+  }
+}
